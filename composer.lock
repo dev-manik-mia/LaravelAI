@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f918046ae034be9ebd3570b501f49d2c",
+    "content-hash": "1dbbc0ffbd2b7bd32234a0206b16c4a0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2498,6 +2498,65 @@
                 }
             ],
             "time": "2026-03-08T20:05:35+00:00"
+        },
+        {
+            "name": "manik/cortex",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/manik/cortex",
+                "reference": "a4af515b18fe65d97a46f24ba157b32936826db1"
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "laravel/framework": "^11.0|^12.0|^13.0",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "pestphp/pest": "^3.0|^4.0",
+                "phpunit/phpunit": "^11.0|^12.0"
+            },
+            "suggest": {
+                "anthropic-php/anthropic": "Required for Anthropic Claude LLM driver.",
+                "google-gemini-php/client": "Required for Google Gemini LLM and Embedding drivers.",
+                "openai-php/client": "Required for OpenAI LLM, Embedding, Image, and Speech drivers."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Manik\\Cortex\\CortexServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cortex": "Manik\\Cortex\\Facades\\Cortex"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Manik\\Cortex\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Manik\\Cortex\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Manik Mia",
+                    "homepage": "https://github.com/manikmia"
+                }
+            ],
+            "description": "A unified AI interface for Laravel — LLMs, embeddings, vector databases, RAG pipelines, agents, and more.",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "monolog/monolog",
@@ -11192,7 +11251,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "manik/cortex": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "manik/cortex": "@dev",
         "inertiajs/inertia-laravel": "^3.0",
         "laravel/chisel": "^0.1.0",
         "laravel/fortify": "^1.37.2",
@@ -100,6 +101,12 @@
             }
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/manik/cortex"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

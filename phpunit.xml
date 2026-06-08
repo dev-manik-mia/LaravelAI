@@ -12,7 +12,7 @@
             <directory>tests/Feature</directory>
         </testsuite>
         <testsuite name="Cortex">
-            <directory>packages/manik/cortex/tests/Unit</directory>
+            <directory>packages/manik/neuro/tests/Unit</directory>
         </testsuite>
     </testsuites>
     <source>

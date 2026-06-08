@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dbbc0ffbd2b7bd32234a0206b16c4a0",
+    "content-hash": "005f3fb5ed62a16f6ec0c5df0cb16ceb",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2500,23 +2500,23 @@
             "time": "2026-03-08T20:05:35+00:00"
         },
         {
-            "name": "manik/cortex",
+            "name": "manik/neuro",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "packages/manik/cortex",
-                "reference": "a4af515b18fe65d97a46f24ba157b32936826db1"
+                "url": "packages/manik/neuro",
+                "reference": "cd1514677818db78739c4915cde257469e294372"
             },
             "require": {
                 "ext-json": "*",
                 "ext-pdo": "*",
                 "guzzlehttp/guzzle": "^7.0",
-                "laravel/framework": "^11.0|^12.0|^13.0",
+                "laravel/framework": "^11.0|^12.0|^13.0|^14.0",
                 "php": "^8.3"
             },
             "require-dev": {
                 "pestphp/pest": "^3.0|^4.0",
-                "phpunit/phpunit": "^11.0|^12.0"
+                "phpunit/phpunit": "^11.0|^12.0|^13.0|^14.0"
             },
             "suggest": {
                 "anthropic-php/anthropic": "Required for Anthropic Claude LLM driver.",
@@ -2527,21 +2527,21 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Manik\\Cortex\\CortexServiceProvider"
+                        "Manik\\Neuro\\NeuroServiceProvider"
                     ],
                     "aliases": {
-                        "Cortex": "Manik\\Cortex\\Facades\\Cortex"
+                        "Neuro": "Manik\\Neuro\\Facades\\Neuro"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Manik\\Cortex\\": "src/"
+                    "Manik\\Neuro\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Manik\\Cortex\\Tests\\": "tests/"
+                    "Manik\\Neuro\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -2550,10 +2550,75 @@
             "authors": [
                 {
                     "name": "Manik Mia",
-                    "homepage": "https://github.com/manikmia"
+                    "homepage": "https://github.com/dev-manik-mia"
                 }
             ],
             "description": "A unified AI interface for Laravel — LLMs, embeddings, vector databases, RAG pipelines, agents, and more.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "manik/nexus",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/manik/nexus",
+                "reference": "2742329dfaa7639d9330cd33087fa638974c4927"
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "laravel/framework": "^11.0|^12.0|^13.0|^14.0",
+                "php": "^8.3",
+                "ramsey/uuid": "^4.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^3.0|^4.0",
+                "phpunit/phpunit": "^11.0|^12.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Required for the Amazon SQS driver.",
+                "basis-company/nats": "Required for the NATS driver.",
+                "google/cloud-pubsub": "Required for the Google Pub/Sub driver.",
+                "grpc/grpc": "Required for the gRPC driver.",
+                "longlang/phpkafka": "Required for the Kafka driver.",
+                "msgpack/msgpack-php": "Required for the MessagePack serializer.",
+                "open-telemetry/opentelemetry": "Required for distributed tracing.",
+                "php-amqplib/php-amqplib": "Required for the RabbitMQ driver.",
+                "predis/predis": "Required for Redis and Redis Streams drivers."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Manik\\Nexus\\NexusServiceProvider"
+                    ],
+                    "aliases": {
+                        "Nexus": "Manik\\Nexus\\Facades\\Nexus"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Manik\\Nexus\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Manik\\Nexus\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Manik Mia",
+                    "homepage": "https://github.com/dev-manik-mia"
+                }
+            ],
+            "description": "Transport-agnostic microservice communication for Laravel — HTTP, Redis, Kafka, RabbitMQ, gRPC, NATS, and more.",
             "transport-options": {
                 "relative": true
             }
@@ -11252,7 +11317,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "manik/cortex": 20
+        "manik/neuro": 20,
+        "manik/nexus": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
